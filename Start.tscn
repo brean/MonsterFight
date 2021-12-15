@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://monster2.png" type="Texture" id=1]
+[ext_resource path="res://monster1.png" type="Texture" id=2]
+[ext_resource path="res://monster.gd" type="Script" id=3]
+[ext_resource path="res://health_bar.png" type="Texture" id=4]
+[ext_resource path="res://attack.gd" type="Script" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MonsterPlayer" type="Sprite" parent="."]
+position = Vector2( 152, 487 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="HealthBar" type="Sprite" parent="MonsterPlayer"]
+position = Vector2( 0, -97 )
+scale = Vector2( 200, 10.5 )
+texture = ExtResource( 4 )
+
+[node name="Monster1" type="Sprite" parent="."]
+position = Vector2( 877, 137 )
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+player = false
+
+[node name="HealthBar" type="Sprite" parent="Monster1"]
+position = Vector2( 0, -68 )
+scale = Vector2( 200, 10.5 )
+texture = ExtResource( 4 )
+
+[node name="attack2" type="Button" parent="."]
+margin_left = 415.0
+margin_top = 478.0
+margin_right = 680.0
+margin_bottom = 529.0
+text = "Water attack"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+_type = "water"
+
+[node name="attack1" type="Button" parent="."]
+margin_left = 413.0
+margin_top = 406.0
+margin_right = 680.0
+margin_bottom = 455.0
+text = "Fire attack"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
