@@ -36,10 +36,7 @@ func calculate_attack():
 
 func check_end():
 	if health <= 0:
-		if player:
-			get_tree().change_scene("res://Lose.tscn")
-		else:
-			get_tree().change_scene("res://Win.tscn")
+		get_node("..").remove_monster(player)
 
 func fight_back():
 	var current_attack = attacks[randi() % attacks.size()]
