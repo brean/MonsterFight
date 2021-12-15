@@ -8,7 +8,7 @@ var attack_names = {
 
 export var player_monster = [
 	{
-		"image": preload("res://monster1.png"),
+		"image": preload("res://Images/monster1.png"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -18,7 +18,7 @@ export var player_monster = [
 		"attacks": ["fire", "water"]
 	},
 	{
-		"image": preload("res://monster2.png"),
+		"image": preload("res://Images/monster2.png"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -30,7 +30,7 @@ export var player_monster = [
 ]
 export var enemy_monster = [
 	{
-		"image": preload("res://monster3.png"),
+		"image": preload("res://Images/monster3.png"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -40,7 +40,7 @@ export var enemy_monster = [
 		"attacks": ["fire", "water"]
 	},
 	{
-		"image": preload("res://monster4.png"),
+		"image": preload("res://Images/monster4.png"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -50,8 +50,8 @@ export var enemy_monster = [
 		"attacks": ["fire", "water"]
 	}
 ]
-var monster = preload("res://Monster.tscn")
-var button = preload("res://attack.tscn")
+var monster = preload("res://Scenes/Monster.tscn")
+var button = preload("res://Scenes/attack.tscn")
 var current_enemy
 var current_player
 var current_button = []
@@ -103,7 +103,7 @@ func remove_monster(player):
 		player_monster.remove(0)
 		# check lose condition
 		if len(player_monster) == 0:
-			get_tree().change_scene("res://Lose.tscn")
+			get_tree().change_scene("res://Scenes/Lose.tscn")
 			return
 		current_player = spawn_monster(player_monster[0], "MonsterPlayer", true)
 		show_attack()
@@ -113,6 +113,6 @@ func remove_monster(player):
 		enemy_monster.remove(0)
 		# check win condition
 		if len(enemy_monster) == 0:
-			get_tree().change_scene("res://Win.tscn")
+			get_tree().change_scene("res://Scenes/Win.tscn")
 			return
 		current_enemy = spawn_monster(enemy_monster[0], "MonsterEnemy", false)

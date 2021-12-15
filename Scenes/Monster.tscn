@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://monster.gd" type="Script" id=1]
-[ext_resource path="res://monster2.png" type="Texture" id=2]
-[ext_resource path="res://health_bar.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/monster.gd" type="Script" id=1]
+[ext_resource path="res://Images/monster2.png" type="Texture" id=2]
+[ext_resource path="res://Images/health_bar.png" type="Texture" id=3]
 
 [node name="MonsterPlayer" type="Sprite"]
 position = Vector2( 147, 471 )
