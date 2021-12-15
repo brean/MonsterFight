@@ -7,9 +7,11 @@ extends Node
 export var health = 100
 export var damage = {
 	"fire": 50,
-	"water": 5}
+	"water": 5,
+	"electro": 10
+}
 export var player = true
-var attacks = ["fire", "water"]
+var attacks = ["fire", "water", "electro"]
 export var fight_time = .5
 
 var attack_animation = false
