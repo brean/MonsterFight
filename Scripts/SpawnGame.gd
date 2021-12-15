@@ -8,7 +8,7 @@ var attack_names = {
 
 export var player_monster = [
 	{
-		"image": preload("res://Images/monster1.png"),
+		"image": preload("res://Scenes/Monster/Monster1.tscn"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -18,7 +18,7 @@ export var player_monster = [
 		"attacks": ["fire", "water"]
 	},
 	{
-		"image": preload("res://Images/monster2.png"),
+		"image": preload("res://Scenes/Monster/Monster2.tscn"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -30,7 +30,7 @@ export var player_monster = [
 ]
 export var enemy_monster = [
 	{
-		"image": preload("res://Images/monster3.png"),
+		"image": preload("res://Scenes/Monster/Monster3.tscn"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -40,7 +40,7 @@ export var enemy_monster = [
 		"attacks": ["fire", "water"]
 	},
 	{
-		"image": preload("res://Images/monster4.png"),
+		"image": preload("res://Scenes/Monster/Monster4.tscn"),
 		"health": 100,
 		"damage": {
 			"fire": 50,
@@ -70,7 +70,7 @@ func spawn_monster(data, name, player):
 	add_child(inst)
 	inst.name = name
 	inst.player = player
-	inst.texture = data.image
+	inst.add_child(data.image.instance())
 	inst.health = data.health
 	inst.damage = data.damage
 	if not player:
