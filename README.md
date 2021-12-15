@@ -1,2 +1,2 @@
 # Monster Fighting Game
-A game where monster fight against each other
+A simple game template where monster fight against each other in Godot 3.4
